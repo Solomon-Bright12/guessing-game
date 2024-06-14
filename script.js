@@ -20,21 +20,27 @@ function guess(){
        
        
         
-        if(guessCount > 5 ){
-            alert("You're not good at this. The number was " + secretNumber);
-            return
-        }
+       
         if(userGuess < secretNumber){
             alert("Too low! Try again.");
+            user5
         }
         else if(userGuess > secretNumber){
             alert("Too high! Try again.");
+            
         }
         else{
-           return `yahh You won !!! <br> the Number was ${secretNumber}<br> You guessed it in ${guessCount} guesses` 
+           return alert (
+          `yahh You won !!! 
+           the Number was ${secretNumber}
+           You guessed it in ${guessCount} guesses` );
         }
            
-        
+         if(guessCount === 5 ){
+            alert("You're not good at this. The number was " + secretNumber);
+            guessCount = 0;
+           
+        }
     }
 )
     
